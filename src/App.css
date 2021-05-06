@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    height: auto;
+    color: #fff;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(images/bg-intro-mobile.png);
+    background-size: cover;
+    height: 100%;
+    font-weight: 400;
+}
+h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left {
+    margin-top: 4.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.right {
+    margin-top: 4rem;
 }
 
-.App-link {
-  color: #61dafb;
+.offer {
+    padding: 2px;
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    box-shadow: 0px 7px 1px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.offer p {
+    font-size: 1rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.try {
+    font-weight: 600;
+}
+
+form {
+    margin-top: 1.5rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+    box-shadow:  0px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    width: 90%;
+    height: 1.5rem;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%);
+    margin-bottom: 1rem;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+button {
+    color: #fff;
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: .5rem;
+    box-shadow: 0px 5px .5px rgba(31, 122, 83, .50);
+}
+
+small {
+    color: hsl(246, 25%, 77%);
+    font-size: 12px;
+    text-align: center;
+}
+
+.legal {
+    text-decoration: none;
+    color: hsl(0, 100%, 74%);
+    font-weight: 500;
+}
+
+@media (min-width: 376px) and (max-width: 1440px) {
+    body {
+        background-image: url(images/bg-intro-desktop.png);
+        background-size: cover;
+        margin-left: 8rem;
+        margin-right: 8rem;
+        margin-top: 4rem;
+    }
+    main {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(376px, 1fr));
+        grid-gap: 3rem;
+    }
+    .left {
+        text-align: left;
+        padding-top: 7rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
 }
